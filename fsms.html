@@ -11788,7 +11788,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
@@ -11823,16 +11823,32 @@ div#notebook {
     
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span> <span class="o">+</span> <span class="n">kv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="p">)</span>
+    
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello </span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="k">__name__</span>)
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello &lt;unity_id&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">O</span><span class="p">):</span>
@@ -11889,7 +11905,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Trans</span><span class="p">(</span><span class="n">O</span><span class="p">):</span>
@@ -11910,7 +11926,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Machine</span><span class="p">(</span><span class="n">O</span><span class="p">):</span>
@@ -11939,8 +11955,9 @@ div#notebook {
         <span class="k">pass</span>
             
     <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># TODO 4: Move the machine if it is currently not in the stop state.</span>
+        <span class="c1"># TODO 4: Move the machine to the next state if it is currently not in the stop state.</span>
         <span class="k">pass</span>
+    
 </pre></div>
 
 </div>
@@ -11950,7 +11967,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Factory</span><span class="p">(</span><span class="n">O</span><span class="p">):</span>
@@ -12004,7 +12021,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">snow_chance</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -12056,13 +12073,13 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">fsm</span><span class="p">(</span><span class="n">factory</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">fsm</span><span class="p">(</span><span class="n">factory</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
     <span class="n">m</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">make_machine</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-    <span class="c1"># TODO 8: Using the on the functions, classes above, code up the</span>
-    <span class="c1"># state machine in the figure on top.</span>
+    <span class="c1"># TODO 8: Using the functions and classes defined above code up the</span>
+    <span class="c1"># state machine in the figure at the top of the page.</span>
     <span class="k">return</span> <span class="n">m</span>
 </pre></div>
 
@@ -12073,7 +12090,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">Factory</span><span class="p">()</span>
@@ -12087,48 +12104,13 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Seed :  100
-2  |  . . . . . . . . . . . . . . . . . . . . . . . . . 7 . . . . . . . . . . . . . . . . . . . . . . . . .
-2  |  . . . . . . . . . . . . . . . . . . . . . . . . . 5 . . 2 . . . . . . . . . . . . . . . . . . . . . .
-1  |  . . . . . . . . . . . . . . . . . . . . . . . . . 5 . . 2 . . . . . . . . . . . . . . . . . . . . . .
-4  |  . . . . . . . . . . . . . . . . . . . . . . . . . 5 . . 2 . . . . . . . . . . . . . . . . . . . . . .
-2  |  . . . . . . . . . . . . . . . . . . . . . . . . . 5 . . . 2 . . . . . . . . . . . . . . . . . . . . .
-4  |  . . . . . . . . . . . . . . . . . . . . . . . . . 1 4 . . 2 . . . . . . . . . . . . . . . . . . . . .
-1  |  . . . . . . . . . . . . . . . . . . . . . . . . . . 5 . . 2 . . . . . . . . . . . . . . . . . . . . .
-2  |  . . . . . . . . . . . . . . . . . . . . . . . . . . 5 . . . . 2 . . . . . . . . . . . . . . . . . . .
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO 9 : Suggest an upgrade to the model by adding more transitions/states and check out the results</span>
 </pre></div>
 
 </div>
